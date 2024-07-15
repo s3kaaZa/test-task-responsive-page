@@ -1,0 +1,141 @@
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f4fc;
+    padding: 24px;
+    max-width: 452px;
+    width: 100%;
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .close-button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    #authForm {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        .form-title {
+            font-size: 24px;
+            line-height: 32.78px;
+            color: #323232;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &.remember {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .password-reset-link {
+                font-size: 20px;
+                line-height: 27.32px;
+                color: #244C98;
+                text-decoration: none;
+            }
+
+            &.buttons {
+                gap: 4px;
+
+                button[type=submit],
+                button[type=button] {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 28.8px;
+                    box-sizing: border-box;
+                }
+
+                .login-button,
+                .register-button {
+                    width: 100%;
+                    border-radius: 4px;
+                    padding: 18px 12px;
+                    box-sizing: border-box;
+                }
+
+                .login-button {
+                    background-color: #244C98;
+                    color: #fff;
+                    border: none;
+                }
+
+                .register-button {
+                    background-color: transparent;
+                    color: #244C98;
+                    border: 1px solid #244C98;
+                }
+            }
+
+            input {
+                width: 100%;
+                border-radius: 10px;
+                padding: 24px;
+                box-sizing: border-box;
+                background-color: #D7E2F6;
+                border: none;
+                font-size: 18px;
+            }
+
+            input::placeholder {
+                font-size: 18px;
+                line-height: 24.59px;
+                color: #1F4284;
+                font-weight: 500;
+            }
+
+            input[type="checkbox"] {
+                vertical-align: middle;
+                width: 24px;
+                height: 24px;
+            }
+
+            label[for="remember-password"] {
+                font-size: 18px;
+                line-height: 24.59px;
+            }
+        }
+    }
+}
+
+.close-button {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button:hover,
+.close-button:focus {
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
