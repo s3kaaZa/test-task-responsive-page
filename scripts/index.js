@@ -156,24 +156,6 @@ function appendElement(group, element) {
                 group.append(inputEl);
             }
             break;
-        case 'checkbox':
-            const checkboxLabel = element.label ? document.createElement('label') : null;
-            const checkboxEl = Object.assign(document.createElement(element.elementTagName), {
-                type: element.elementType,
-                id: element.name,
-                name: element.name,
-                checked: element.checked
-            });
-
-            checkboxLabel.setAttribute('for', element.name);
-            checkboxLabel.innerText = element.label;
-
-            if (element.labelPosition === 'before') {
-                group.append(checkboxLabel, checkboxEl);
-            } else if (element.labelPosition === 'after') {
-                group.append(checkboxEl, checkboxLabel);
-            }
-            break;
         case 'link':
             const linkEl = Object.assign(document.createElement(element.elementTagName), {
                 href: element.href,
