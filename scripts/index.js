@@ -8,7 +8,8 @@ const DINAMIC_FORM = [
                 elementTagName: 'input',
                 label: null,
                 placeholder: 'Email/Телефон',
-                required: true
+                required: true,
+                name: 'email'
             },
             {
                 elementType: 'input',
@@ -16,7 +17,8 @@ const DINAMIC_FORM = [
                 type: 'password',
                 label: null,
                 placeholder: 'Пароль',
-                required: true
+                required: true,
+                name: 'password'
             }
         ]
     },
@@ -139,7 +141,7 @@ function appendElement(group, element) {
             const inputEl = Object.assign(document.createElement(element.elementTagName), {
                 type: element.type,
                 id: element.type,
-                name: element.type,
+                name: element.name,
                 placeholder: element.placeholder,
                 required: element.required
             });
