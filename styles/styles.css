@@ -47,6 +47,10 @@ body {
             align-items: center;
             max-width: fit-content;
 
+            .text {
+                flex: 1;
+            }
+
             .arrow-container {
                 margin: 0;
                 height: 44px;

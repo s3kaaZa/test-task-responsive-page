@@ -146,7 +146,10 @@ function appendElement(group, element) {
 
             if (inputLabel) {
                 inputLabel.setAttribute('for', element.type);
-                group.append(inputLabel, inputEl);
+                inputLabel.insertAdjacentText('afterbegin', element.label);
+                element.labelPosition === 'after' ?
+                    group.append(inputEl, inputLabel) :
+                    group.append(inputLabel, inputEl)
             } else {
                 group.append(inputEl);
             }
